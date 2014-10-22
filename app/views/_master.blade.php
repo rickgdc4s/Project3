@@ -12,13 +12,13 @@
 <body>
 
 	<a href='/'><img class='logo' src='/images/laravel-foobooks-logo@2x.png' alt='Foobooks logo'></a>
-
+	
 	<nav>
 		<ul>
-			<li><a href='/list'>Execute Lorem Ipsum Generator</a></li>
-			<li><a href='/add'>Generate Random Users</a></li>
+			<li><a href='/lorem_ipsum'>Execute Lorem Ipsum Generator</a></li>
+			<li><a href='/random_user'>Generate Random Users</a></li>
 		</ul>
-	</nav>
+	</nav>		
 	
 	@yield('content')
 

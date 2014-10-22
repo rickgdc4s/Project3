@@ -17,36 +17,41 @@ Route::get('/', function()
 	return View::make('_master');
 });
 
-Route::get('/list', function()
+Route::get('/lorem_ipsum', function()
 {
 	//return View::make('hello');
-	return View::make('index');
+	return View::make('gen_lorem');
 });
 
-Route::post('/list', function()
+Route::post('/lorem_ipsum', function()
 {
     $query = Input::get('query');
 	
 	$generator = new Badcow\LoremIpsum\Generator();
 	$paragraphs = $generator->getParagraphs($query);
 	
-	return View::make('list')
+	return View::make('lorem_ipsum')
          ->with('query', $query)
 		 ->with('paragraphs', $paragraphs);
 		 
-	//return View::make('hello');
-	//return View::make('index');
 });
 
-Route::get('/add', function()
+Route::get('/random_user', function()
 {
+	return View::make('gen_user');
+});
+
+
+Route::post('/random_user', function()
+{
+    $query = Input::get('query');
 
      $faker = Faker\Factory::create();
 	 
-	 echo $faker->name;
+	 //echo $faker->name;
 
-	//return View::make('hello');
-	return View::make('add')
-	         ->with('faker', $faker);
+	return View::make('random_user')
+         ->with('query', $query)	
+	     ->with('faker', $faker);
 
 });

@@ -2,15 +2,15 @@
 <html>
 <head>
 
-	<title>Lorem Ipsum Generator</title>
+	<title>User Generator</title>
 	<meta charset='utf-8'>
 	
 </head>
 <body>
 
-		<ul> In Lorem Ipsum Generator</ul>
+		<ul> In User Generator</ul>
 		
-		{{ Form::open(array('url' => '/list', 'method' => 'POST')) }}
+		{{ Form::open(array('url' => '/random_user', 'method' => 'POST')) }}
 
 		{{ Form::label('query','Search') }}
 	
@@ -22,4 +22,3 @@
 	
 </body>
 </html>
-
