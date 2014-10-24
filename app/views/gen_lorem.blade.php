@@ -8,6 +8,9 @@
 </head>
 <body>
 
+<!-- Create the form to obtain the number of paragraphs, and to generate the Lorem Ipsum 
+      on the lorem_ipsum blade view page  -->
+
 		<hl><b>Lorem Ipsum Generator</b><br><br></hl> 
 		
 		{{ Form::open(array('url' => '/lorem_ipsum', 'method' => 'POST')) }}

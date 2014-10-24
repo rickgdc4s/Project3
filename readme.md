@@ -1,25 +1,30 @@
-## Laravel PHP Framework
+## Project P3: Developer's Best Friend ##
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+### Live URL
+[http://p3.rickcscie15.me](http://p3.rickcscie15.me)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+### Description ###
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
+Project P3 is a combination Lorem Ipsum and Random User Generator. On a multi-page website using basic HTML, PHP, and the Laravel framework, a user can generate Lorem Ipsum text in the requested number of paragraphs, or a requested number of Random Users, with or without dummy birthdays and Lorem Ipsum-based profiles.
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+### Demo ###
 
-## Official Documentation
+I will demo my version of the Developer's Best Friend at the Tuesday Evening Online Section on Tuesday, Oct. 28, 2014.
 
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
+### Details for Teaching Team ###
 
-### Contributing To Laravel
+Project 2 contains the following files:
 
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
+- routes.php
+- _master.blade.php
+- gen_lorem.blade.php
+- gen_user.blade.php
+- lorem_ipsum.blade.php
+- random_user.blade.php
+- readme.md
 
-### License
+### Outside Code ###
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+- badcow/lorem-ipsum package
+- fzaninotto/faker package
+
