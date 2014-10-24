@@ -25,7 +25,8 @@
 		     <p>Generate some Lorem Ipsum dummy text, using the badcow-loremipsum package: </p>	
 			 
 <!-- Provide a link to the Lorem Ipsum Generator page, to be routed through the lorem_ipsum route -->			  			 
-			<li><a href='/lorem_ipsum'>Execute Lorem Ipsum Generator</a></li><br>		
+			<a href='/lorem_ipsum'>Execute Lorem Ipsum Generator</a>
+			<br>		
 			
 		     <p>Generate some dummy random users, using the fzaninotto-faker package, <br>
 			  a Lorem Ipsum-like package for generating dummy text. Here, we are using <br>
@@ -33,7 +34,7 @@
               and Lorem Ipsum text for user profiles:</p>						
 			 
 <!-- Provide a link to the Generate Random Users page, to be routed through the random user route -->			  
-			<li><a href='/random_user'>Generate Random Users</a></li>			 
+			<a href='/random_user'>Generate Random Users</a>			 
 	 	
 </body>
 </html>
