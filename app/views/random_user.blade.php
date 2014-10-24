@@ -7,19 +7,25 @@
 	
 </head>
 <body>
+	
+	<li><a href='/'>Return to Home Page</a></li>
+	
+	<br>
 
-	<a href='/'><img class='logo' src='/images/laravel-foobooks-logo@2x.png' alt='Foobooks logo'></a>
+	<h2>You requested {{{ $query }}} Users</h2>	
 	
-	<h1>Add Users</h1>
-	
-	<li><a href='/'>Home</a></li>	
 	
 @for ($i=0; $i < $query; $i++) 
-  <h2>{{{ $faker->name }}}</h2>
-  <h2>Birthday: {{{ $faker->monthName }}}, 
+  <p><br>Name: {{{ $faker->name }}}
+  @if ( ($birthday) )
+		<br>Birthday: {{{ $faker->monthName }}}, 
 	    {{{ $faker->dayOfMonth }}}, 
-		{{{ $faker->year }}}</h2>
-  <h2>Profile: {{{ $faker->text }}}</h2>
+		{{{ $faker->year }}} 
+  @endif
+  
+  @if ( ($profile) )		
+     <br>Profile: {{{ $faker->text }}}<p>
+  @endif
 @endfor	
 				
 </body>

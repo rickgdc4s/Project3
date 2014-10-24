@@ -8,17 +8,30 @@
 </head>
 <body>
 
-		<ul> In User Generator</ul>
+	<hl><b>User Generator</b><br><br></hl> 
 		
-		{{ Form::open(array('url' => '/random_user', 'method' => 'POST')) }}
+	{{ Form::open(array('url' => '/random_user', 'method' => 'POST')) }}
 
-		{{ Form::label('query','Search') }}
-	
-		{{ Form::text('query'); }}
+		{{ Form::label('query','Enter the # of Users ') }}
+		
+	    {{ Form::text('query'); }}
+		
+		{{ Form::submit('Generate'); }}
+		
+		<br>
+		
+		{{ Form::label('birthday', 'Birthday') }}
+			
+		{{ Form::checkbox('birthday', 'Birthday') }}	
 
-		{{ Form::submit('Search'); }}
+		<br>
+		
+		{{ Form::label('profile', 'Profile') }}
+			
+		{{ Form::checkbox('profile', 'Profile') }}			
 
 	{{ Form::close() }}
+	
 	
 </body>
 </html>

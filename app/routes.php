@@ -31,9 +31,8 @@ Route::post('/lorem_ipsum', function()
 	$paragraphs = $generator->getParagraphs($query);
 	
 	return View::make('lorem_ipsum')
-         ->with('query', $query)
-		 ->with('paragraphs', $paragraphs);
-		 
+        ->with('query', $query)
+		->with('paragraphs', $paragraphs);		 
 });
 
 Route::get('/random_user', function()
@@ -45,13 +44,16 @@ Route::get('/random_user', function()
 Route::post('/random_user', function()
 {
     $query = Input::get('query');
-
-     $faker = Faker\Factory::create();
+	$birthday = Input::get('birthday');
+	$profile = Input::get('profile');
+	
+    $faker = Faker\Factory::create();
 	 
-	 //echo $faker->name;
-
 	return View::make('random_user')
          ->with('query', $query)	
-	     ->with('faker', $faker);
+	     ->with('birthday', $birthday)
+		 ->with('profile', $profile)
+		 ->with('faker', $faker);
+		 
 
 });

@@ -8,15 +8,15 @@
 </head>
 <body>
 
-		<ul> In Lorem Ipsum Generator</ul>
+		<hl><b>Lorem Ipsum Generator</b><br><br></hl> 
 		
 		{{ Form::open(array('url' => '/lorem_ipsum', 'method' => 'POST')) }}
 
-		{{ Form::label('query','Search') }}
+		{{ Form::label('query','Enter the # of Paragraphs ') }}
 	
 		{{ Form::text('query'); }}
 
-		{{ Form::submit('Search'); }}
+		{{ Form::submit('Generate'); }}
 
 		{{ Form::close() }}	
 	

@@ -11,7 +11,7 @@
 </head>
 <body>
 
-	<a href='/'><img class='logo' src='/images/laravel-foobooks-logo@2x.png' alt='Foobooks logo'></a>
+	<h1>Developer's Best Friend<br></h1>
 	
 	<nav>
 		<ul>
