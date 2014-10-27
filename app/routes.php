@@ -34,6 +34,25 @@ Route::post('/lorem_ipsum', function()
 	// Obtain the number of paragraphs to generate
     $query = Input::get('query');
 	
+	// Create the validation constraint set
+	$rules = array();
+	
+	// Create the Validator instance on the query field
+	//   The number of paragraphs requested must be between 1 and 99		
+	$validation = Validator::make(
+	   array(
+	     'query' => Input::get( 'query' ),
+		 ),
+	   array(
+	     'query' => array( 'required', 'integer', 'Min:1', 'Max:99' )
+		 )
+	);
+	
+	//If an error occurs, print an error message on the lorem ipsum page
+	if ($validation->fails()) {
+	   return Redirect::to('/lorem_ipsum')->withErrors($validation->messages());
+	   }	
+	
 	// Use the Badcow LoremIpsum Generator to generate the text
 	//  Instantiate a Badcow LoremIpsum Generator object
 	$generator = new Badcow\LoremIpsum\Generator();
@@ -64,6 +83,27 @@ Route::post('/random_user', function()
 	
 	// Get the number of users
     $query = Input::get('query');
+	////$query = Input::all();
+	
+	// Create the validation constraint set
+	$rules = array();
+	
+	// Create the Validator instance on the query field
+	//   The number of random users requested must be between 1 and 99
+	$validation = Validator::make(
+	   array(
+	     'query' => Input::get( 'query' ),
+		 ),
+	   array(
+	     'query' => array( 'required', 'integer', 'Min:1', 'Max:99' )
+		 )
+	);
+	
+	//If an error occurs, print an error message on the random user page
+	if ($validation->fails()) {
+	   return Redirect::to('/random_user')->withErrors($validation->messages());
+	   }
+	   
 	
 	// Get the value of the Birthday check box
 	$birthday = Input::get('birthday');

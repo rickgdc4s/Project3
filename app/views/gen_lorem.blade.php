@@ -8,6 +8,14 @@
 </head>
 <body>
 
+<!-- Display error messages if any errors found during validation  -->	
+
+	<ul class="errors">
+    @foreach($errors->all() as $message)
+        <li>{{ $message }}</li>
+    @endforeach
+    </ul>
+
 <!-- Create the form to obtain the number of paragraphs, and to generate the Lorem Ipsum 
       on the lorem_ipsum blade view page  -->
 
@@ -15,7 +23,7 @@
 		
 		{{ Form::open(array('url' => '/lorem_ipsum', 'method' => 'POST')) }}
 
-		{{ Form::label('query','Enter the # of Paragraphs ') }}
+		{{ Form::label('query','Enter the # of Paragraphs: 1 - 99 ') }}
 	
 		{{ Form::text('query'); }}
 

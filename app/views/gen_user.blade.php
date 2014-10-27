@@ -10,12 +10,20 @@
 
 	<hl><b>User Generator</b><br><br></hl> 
 	
+<!-- Display error messages if any errors found during validation  -->	
+	
+	<ul class="errors">	
+    @foreach($errors->all() as $message)
+        <li>{{ $message }}</li>
+    @endforeach
+    </ul>
+	
 <!-- Create the form to obtain the number of users, and whether to also generate birthday and 
       profile dummy text on the random_user blade view page  -->	
 		
 	{{ Form::open(array('url' => '/random_user', 'method' => 'POST')) }}
 
-		{{ Form::label('query','Enter the # of Users ') }}
+		{{ Form::label('query','Enter the # of Users: 1 - 99 ') }}
 		
 	    {{ Form::text('query'); }}
 		
